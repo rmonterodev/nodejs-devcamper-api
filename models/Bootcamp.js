@@ -31,11 +31,7 @@ const BootcampSchema = new mongoose.Schema({
         ]
     },
     email: {
-        type: String,
-        match: [
-            /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/,
-            'Please use a valid email'
-        ]
+        type: String
     },
     address: {
         type: String,
@@ -46,11 +42,9 @@ const BootcampSchema = new mongoose.Schema({
         type: {
             type: String, // Don't do `{ location: { type: String } }`
             enum: ['Point'], // 'location.type' must be 'Point'
-            required: true
         },
         coordinates: {
             type: [Number],
-            required: true,
             index: '2dsphere'
         },
         formattedAddress: String,

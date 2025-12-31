@@ -22,6 +22,9 @@ process.on('unhandledRejection', (err, promise) => {
 
 const app = express();
 
+//Body parser
+app.use(express.json());
+
 // const logger = (req, res, next) => {
 //     console.log(`${req.method} ${req.protocol}://${req.get('host')}${req.originalUrl}`);
 //     next();
