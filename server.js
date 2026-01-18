@@ -25,6 +25,7 @@ const app = express();
 
 //Body parser
 app.use(express.json());
+app.set('query parser', 'extended'); // to support nested query objects
 
 // const logger = (req, res, next) => {
 //     console.log(`${req.method} ${req.protocol}://${req.get('host')}${req.originalUrl}`);

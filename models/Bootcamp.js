@@ -74,6 +74,7 @@ const BootcampSchema = new mongoose.Schema({
         max: [10, 'Rating can not be more than 10']
     },
     averageCost: Number,
+    housing: Boolean,
     photo: {
         type: String,
         default: 'no-photo.jpg'
